@@ -8,9 +8,8 @@ import (
 
 func main() {
 	http.Handle("/", http.FileServer(http.Dir(".")))
-	http.HandleFunc("/hello", web.Hello)
-	http.HandleFunc("/hellohtml", web.HelloHTML)
-	http.HandleFunc("/formsubmit", web.FormSubmit)
-	http.HandleFunc("/template", web.HelloTempHandler)
+	http.HandleFunc("/home", web.Home)
+	http.HandleFunc("/chat", web.Chat)
+	http.HandleFunc("/ttt", web.T3)
 	http.ListenAndServe(":9000", nil)
 }
