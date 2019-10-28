@@ -10,10 +10,9 @@ import (
 Home doc
 */
 func Home(response http.ResponseWriter, request *http.Request) {
-	home, _ := template.ParseFiles("home.html")
+	response.Header().Set("Content-Type", "text/html")
+	home, _ := template.ParseFiles("web/template/home.html")
 	home.Execute(response, request)
 
-	//response.Header().Set("Content-Type", "text/html")
-	//io.WriteString(response, "home.html")
 	fmt.Println("Navigated to Home")
 }
