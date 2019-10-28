@@ -9,10 +9,10 @@ import (
 /*
 Home doc
 */
-func Home(response http.ResponseWriter, request *http.Request) {
-	response.Header().Set("Content-Type", "text/html")
+func Home(res http.ResponseWriter, req *http.Request) {
+	res.Header().Set("Content-Type", "text/html")
 	home, _ := template.ParseFiles("web/template/home.html")
-	home.Execute(response, request)
+	home.Execute(res, req)
 
 	fmt.Println("Navigated to Home")
 }

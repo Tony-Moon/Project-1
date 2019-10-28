@@ -11,10 +11,10 @@ import (
 /*
 T3 is Tic Tac Toe
 */
-func T3(response http.ResponseWriter, request *http.Request) {
+func T3(res http.ResponseWriter, req *http.Request) {
 	fmt.Println("Navigated to T3")
 
-	response.Header().Set("Content-Type", "text/html")
+	res.Header().Set("Content-Type", "text/html")
 	temp, _ := template.ParseFiles("web/template/t3.html")
-	temp.Execute(response, request)
+	temp.Execute(res, req)
 }
