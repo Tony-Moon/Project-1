@@ -6,8 +6,6 @@ import (
 	"text/template"
 )
 
-// var t3 = template.Must(template.New(".").Parse("template/t3.html"))
-
 /*
 T3 is Tic Tac Toe
 */
