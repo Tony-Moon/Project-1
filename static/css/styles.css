@@ -1,4 +1,27 @@
-.BlueButton {
+body{
+    background-color: darkslategray
+}
+h1 {
+    color: white
+}
+p {
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    padding: 15px;
+}
+
+.gx, .go, .rx, .bo {
+	width: 64px; 
+	height: 64px;
+    background: url('../css_sprites.png') -10px -10px;
+}
+
+.gx {background-position: 0, 0}
+.go {background-position: 64px, 0}
+.rx {background-position: 64px, 0}
+.bo {background-position: 64px, 64px}
+
+.blueButton {
 	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
 	background-color:#7892c2;
 	border-radius:15px;
@@ -13,11 +36,11 @@
 	text-decoration:none;
 	text-shadow:0px 1px 11px #0b1633;
 }
-.BlueButton:hover {
+.blueButton:hover {
 	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
 	background-color:#476e9e;
 }
-.BlueButton:active {
+.blueButton:active {
 	position:relative;
 	top:1px;
 }
