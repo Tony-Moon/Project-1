@@ -2,6 +2,7 @@ package web
 
 import (
 	"fmt"
+	"net"
 	"net/http"
 	"text/template"
 )
@@ -14,5 +15,11 @@ func UserLogin(res http.ResponseWriter, req *http.Request) {
 	chat, _ := template.ParseFiles("web/template/ulog.html")
 	chat.Execute(res, req)
 
-	fmt.Println("Navigated to User Login")
+	ifas, _ := net.Interfaces()
+	for _, ifa := range ifas {
+		mac := ifa.HardwareAddr.String()
+		fmt.Println(mac)
+	}
+
+	//users := NewUser(mac)
 }
