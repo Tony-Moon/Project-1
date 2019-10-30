@@ -15,6 +15,7 @@ func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 
 	http.HandleFunc("/home", web.Home)
+	http.HandleFunc("/ulog", web.UserLogin)
 	http.HandleFunc("/chat", web.Chat)
 	http.HandleFunc("/ttt", web.T3)
 	http.HandleFunc("/alog", web.AdminLogin)
