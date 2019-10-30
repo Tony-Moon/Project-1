@@ -10,30 +10,6 @@ p {
     padding: 15px;
 }
 
-.gx, .go, .rx, .bo {
-	width: 64px; 
-	height: 64px;
-    background: url('./css_sprites.png');
-}
-
-.gx {background-position: 0 0;}
-.go {background-position: 64px 0;}
-.rx {background-position: 0 64px;}
-.bo {background-position: 64px 64px;}
-
-.t3 {
-	width: 65px; 
-	height: 65px;
-	background: url('./css_sprites.png');
-	background-position: 64px 0;
-}
-.t3:hover {
-	background-position:0 0;
-}
-.t3.disabled {
-	background-position:0 64px;
-}
-
 .blueButton {
 	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
 	background-color:#7892c2;

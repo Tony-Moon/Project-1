@@ -13,6 +13,6 @@ func T3(res http.ResponseWriter, req *http.Request) {
 	fmt.Println("Navigated to T3")
 
 	res.Header().Set("Content-Type", "text/html")
-	temp, _ := template.ParseFiles("web/template/t3.html")
+	temp, _ := template.ParseFiles("t3/template/t3.html")
 	temp.Execute(res, req)
 }

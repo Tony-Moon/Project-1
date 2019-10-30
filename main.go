@@ -7,13 +7,9 @@ import (
 	"net/http"
 
 	"github.com/Tony-Moon/Project-1/admin"
-	_ "github.com/Tony-Moon/Project-1/admin"
 	"github.com/Tony-Moon/Project-1/chat"
-	_ "github.com/Tony-Moon/Project-1/chat"
 	"github.com/Tony-Moon/Project-1/home"
-	_ "github.com/Tony-Moon/Project-1/home"
 	"github.com/Tony-Moon/Project-1/t3"
-	_ "github.com/Tony-Moon/Project-1/t3"
 )
 
 const (

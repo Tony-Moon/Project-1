@@ -1,7 +1,7 @@
 package chat
 
 import (
-	"database/sql"
+	"fmt"
 	"net/http"
 	"text/template"
 )
@@ -9,12 +9,13 @@ import (
 /*
 Chat doc
 */
-func Chat(res http.ResponseWriter, req *http.Request, db *sql.DB) {
+func Chat(res http.ResponseWriter, req *http.Request) {
 	var message string
 	res.Header().Set("Content-Type", "text/html")
-	chat, _ := template.ParseFiles("web/template/chat.html")
+	chat, _ := template.ParseFiles("chat/template/chat.html")
 	chat.Execute(res, req)
 
 	message = "Navigated to Chat"
-	MessageLog(db, message)
+	fmt.Println(message)
+	//MessageLog(db, message)
 }
