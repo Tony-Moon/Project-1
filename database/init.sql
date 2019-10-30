@@ -1,7 +1,9 @@
 create table users (
     macadd varchar unique,
     username varchar unique,
-    nickname varchar
+    userpass varchar,
+    nickname varchar,
+    userrank bool
 );
 
 create table messagerelation (
@@ -14,6 +16,6 @@ create table messages (
     mText varchar
 );
 
-insert into users values ('0', 'dbCreator', 'Hal');
+insert into users values ('0', 'dbCreator', '2001', 'Hal', true);
 insert into messagerelation values (0, 'dbCreator');
 insert into messages values (0, 'db Created');

@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>User Login</title>
+        <title>Create Account</title>
         <link rel="stylesheet" type="text/css" href="static/styles.css">
     </head>
     <body>
-        <p>Login in to continue</p>
-        <form action="home" method="POST">
+        <form action="http://localhost:900/home" method="GET">
             <input type="text" class="form-control" id="name" placeholder="User Name" name="username">
-            <input type="password" class="form-control" id="pass" placeholder="Password" name="password">
+            <input type="password" class="form-control" id="pass" placeholder="Password" name="userpass">
+            <input type="text" class="form-control" id="nick" placeholder="Nick Name" name="nickname">
             <input type="submit" value="Login"/>
         </form>
         <form action="http://localhost:9000">
             <button type="submit" class="blueButton">Take me back</button>
-        </form>
-        <form action="http://localhost:9000/create">
-            <button type="submit" class="blueButton">Create Account</button>
         </form>
     </body>
 </html>
