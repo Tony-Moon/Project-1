@@ -35,7 +35,6 @@ func main() {
 	http.HandleFunc("/home", home.Home)
 	http.HandleFunc("/ulog", home.UserLogin)
 	http.HandleFunc("/create", home.CreateUser)
-	http.HandleFunc("/inter", home.Inter)
 	http.HandleFunc("/chat", chat.Chat)
 	http.HandleFunc("/ttt", t3.T3)
 	http.HandleFunc("/alog", admin.AdminLogin)
