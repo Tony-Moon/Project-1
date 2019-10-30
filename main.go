@@ -6,7 +6,14 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/Tony-Moon/Project-1/admin"
+	_ "github.com/Tony-Moon/Project-1/admin"
+	"github.com/Tony-Moon/Project-1/chat"
+	_ "github.com/Tony-Moon/Project-1/chat"
+	"github.com/Tony-Moon/Project-1/home"
 	_ "github.com/Tony-Moon/Project-1/home"
+	"github.com/Tony-Moon/Project-1/t3"
+	_ "github.com/Tony-Moon/Project-1/t3"
 )
 
 const (
@@ -35,9 +42,9 @@ func main() {
 	http.HandleFunc("/home", home.Home)
 	http.HandleFunc("/ulog", home.UserLogin)
 	http.HandleFunc("/chat", chat.Chat)
-	http.HandleFunc("/ttt", web.t3.T3)
-	http.HandleFunc("/alog", web.admin.AdminLogin)
-	http.HandleFunc("/admin", web.admin.Admin)
+	http.HandleFunc("/ttt", t3.T3)
+	http.HandleFunc("/alog", admin.AdminLogin)
+	http.HandleFunc("/admin", admin.Admin)
 
 	http.ListenAndServe(":9000", nil)
 }

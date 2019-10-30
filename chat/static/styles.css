@@ -1,0 +1,59 @@
+body{
+    background-color: darkslategray
+}
+h1 {
+    color: white
+}
+p {
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    padding: 15px;
+}
+
+.gx, .go, .rx, .bo {
+	width: 64px; 
+	height: 64px;
+    background: url('./css_sprites.png');
+}
+
+.gx {background-position: 0 0;}
+.go {background-position: 64px 0;}
+.rx {background-position: 0 64px;}
+.bo {background-position: 64px 64px;}
+
+.t3 {
+	width: 65px; 
+	height: 65px;
+	background: url('./css_sprites.png');
+	background-position: 64px 0;
+}
+.t3:hover {
+	background-position:0 0;
+}
+.t3.disabled {
+	background-position:0 64px;
+}
+
+.blueButton {
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	background-color:#7892c2;
+	border-radius:15px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:23px;
+	font-weight:bold;
+	padding:11px 18px;
+	text-decoration:none;
+	text-shadow:0px 1px 11px #0b1633;
+}
+.blueButton:hover {
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	background-color:#476e9e;
+}
+.blueButton:active {
+	position:relative;
+	top:1px;
+}
