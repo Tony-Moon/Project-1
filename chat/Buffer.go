@@ -22,7 +22,7 @@ func Buffer(res http.ResponseWriter, req *http.Request) {
 	buffer, _ := template.ParseFiles("chat/template/buffer.html")
 
 	nickname = req.FormValue("name")
-	fmt.Println(nickname)
+	fmt.Println(nickname, "has joined the chat room!")
 
 	buffer.Execute(res, req)
 
@@ -50,8 +50,7 @@ func ReBuffer(res http.ResponseWriter, req *http.Request) {
 
 	message := req.FormValue("mess")
 	current := Processor(nickname, message)
-	fmt.Println(current.name)
-	fmt.Println(current.mess)
+	fmt.Println(current.name + ": " + current.mess)
 
 	reBuffer.Execute(res, req)
 }
