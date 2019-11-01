@@ -1,7 +1,6 @@
 package chat
 
 import (
-	"fmt"
 	"net/http"
 	"text/template"
 )
@@ -13,6 +12,4 @@ func Home(res http.ResponseWriter, req *http.Request) {
 	res.Header().Set("Content-Type", "text/html")
 	home, _ := template.ParseFiles("chat/template/home.html")
 	home.Execute(res, req)
-
-	fmt.Println("Navigated to Home")
 }

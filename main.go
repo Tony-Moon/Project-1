@@ -12,5 +12,7 @@ func main() {
 
 	http.HandleFunc("/home", chat.Home)
 	http.HandleFunc("/ulog", chat.UserLogin)
+	http.HandleFunc("/buffer", chat.Buffer)
+	http.HandleFunc("/rebuffer", chat.ReBuffer)
 	http.ListenAndServe(":9000", nil)
 }
