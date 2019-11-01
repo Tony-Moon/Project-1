@@ -32,3 +32,21 @@ p {
 	position:relative;
 	top:1px;
 }
+
+.goR, .goL {
+	width: 128px;
+	height: 128px;
+	background: url('./gopher.png');
+}
+.goR {background-position: 128px;}
+.goL {background-position: 0;}
+
+.gopherBTN {
+	width: 128px;
+	height: 128px;
+	background: url('./gopher.png');
+	background-position: 0 0;
+}
+.gopherBTN:hover {
+	background-position: 128px 0;
+}

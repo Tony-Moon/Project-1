@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Login</title>
+        <link rel="stylesheet" type="text/css" href="./static/styles.css">
+    </head>
+    <body>
+        <p>Login in to continue</p>
+        <form action="http://localhost:9000/home" method="POST">
+            <input type="text" name="name" placeholder="User Name" id="username">
+            <input type="password" name="pass" placeholder="Password" id="password">
+            <input type="submit" value="Login"/>
+        </form>
+        <form action="http://localhost:9000" method="POST">
+            <button type="submit" class="blueButton">Take me back</button>
+        </form>
+        <form action="http://localhost:9000/create" method="POST">
+            <button disabled type="submit" class="blueButton">Create Account</button>
+        </form>
+    </body>
+</html>
+</DOCTYPE>
