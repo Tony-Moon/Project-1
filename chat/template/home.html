@@ -5,14 +5,18 @@
         <link rel="stylesheet" type="text/css" href="./static/styles.css">
     </head>
     <body>
-        <p>Home Page</p>
-        <form action="http://localhost:9000/chat" method="POST">
-            <button type="submit" class="blueButton">Chat</button>
+        <p>Welcome to the Chat Room!</p>
+        <table>
+            <th>Message History</th>
+        </table>
+        <form method="POST" action="/chat">
+            Type message:<br>
+            <input type="text" name="mess" id="message">
+            <input type="submit" value="Submit">
         </form>
         <form action="http://localhost:9000/" method="POST">
             <button type="submit" class="blueButton">Logout</button>
         </form>
-        <button type="btn" class="gopherBTN"></button>
     </body>
 </html>
 </DOCTYPE>

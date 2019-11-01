@@ -12,6 +12,5 @@ func main() {
 
 	http.HandleFunc("/home", chat.Home)
 	http.HandleFunc("/ulog", chat.UserLogin)
-	http.HandleFunc("/chat", chat.Chat)
 	http.ListenAndServe(":9000", nil)
 }
