@@ -22,7 +22,14 @@ func Buffer(res http.ResponseWriter, req *http.Request) {
 
 	nickname = req.FormValue("name")
 
-	ip := GetIP()
+	ip := req.Header.Get("X-Real-Ip")
+	if ip == "" {
+		ip = req.Header.Get("X-Forwarded-For")
+	}
+	if ip == "" {
+		ip = req.RemoteAddr
+	}
+
 	fmt.Println(ip)
 	NickIPs[ip] = nickname
 	fmt.Println(NickIPs[ip], "has joined the chat room!")
