@@ -2,9 +2,7 @@ package chat
 
 import (
 	"fmt"
-	"net"
 	"net/http"
-	"strings"
 	"text/template"
 )
 
@@ -46,16 +44,16 @@ func ReBuffer(res http.ResponseWriter, req *http.Request) {
 	reBuffer, _ := template.ParseFiles("chat/template/rebuffer.html")
 
 	message := req.FormValue("mess")
-	ip := GetIP()
+
+	ip := req.Header.Get("X-Real-Ip")
+	if ip == "" {
+		ip = req.Header.Get("X-Forwarded-For")
+	}
+	if ip == "" {
+		ip = req.RemoteAddr
+	}
+
 	fmt.Println(NickIPs[ip] + ": " + message)
 
 	reBuffer.Execute(res, req)
-}
-
-// GetIP doc
-func GetIP() string {
-	conn, _ := net.Dial("udp", "8.8.8.8:80")
-	localAddr := conn.LocalAddr().String()
-	idx := strings.LastIndex(localAddr, ":")
-	return localAddr[0:idx]
 }
