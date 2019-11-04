@@ -50,3 +50,6 @@ p {
 .gopherBTN:hover {
 	background-position: 128px 0;
 }
+.gopherBTN:hover {
+	background-position: 256px 0;
+}
