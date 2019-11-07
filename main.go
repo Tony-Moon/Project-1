@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-
+	chat.InitBoard()
 	http.Handle("/", http.FileServer(http.Dir(".")))
 
 	http.HandleFunc("/home", chat.Home)
